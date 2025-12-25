@@ -1,14 +1,16 @@
 CC = gcc
-CFLAGS = -Wall -g
-INCLUDES = -I./include
+CFLAGS = -Wall -g -Iinclude
 
-SRCS = src/main.c src/builtins.c
-TARGET = shell
+all: shell sudoku monte_carlo
 
-all: $(TARGET)
+shell: src/main.c src/builtins.c
+	$(CC) $(CFLAGS) src/main.c src/builtins.c -o shell
 
-$(TARGET):
-	$(CC) $(CFLAGS) $(INCLUDES) $(SRCS) -o $(TARGET)
+sudoku: src/sudoku.c
+	$(CC) $(CFLAGS) src/sudoku.c -o sudoku -pthread
+
+monte_carlo: src/monte_carlo.c
+	$(CC) $(CFLAGS) src/monte_carlo.c -o monte_carlo -pthread
 
 clean:
-	rm -f $(TARGET)
+	rm -f shell sudoku monte_carlo 

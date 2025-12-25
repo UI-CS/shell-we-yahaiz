@@ -36,6 +36,8 @@
 *.x86_64
 *.hex
 shell
+sudoku
+monte_carlo
 
 # Debug files
 *.dSYM/
