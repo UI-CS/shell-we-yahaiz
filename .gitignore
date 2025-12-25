@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-shell
-*.o
-.DS_Store
-.vscode/
-=======
 # Prerequisites
 *.d
 
@@ -41,6 +35,7 @@ shell
 *.i*86
 *.x86_64
 *.hex
+shell
 
 # Debug files
 *.dSYM/
@@ -59,4 +54,7 @@ dkms.conf
 
 # debug information files
 *.dwo
->>>>>>> 4322cd0beae0d879ee1f8556cad0086297480cb2
+
+# Editor/OS files
+.DS_Store
+.vscode/
